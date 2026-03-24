@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — LensLogic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --surface: #111114;
+    --surface2: #18181d;
+    --border: rgba(255,255,255,0.07);
+    --border-bright: rgba(255,255,255,0.15);
+    --text: #f0ede8;
+    --text-dim: #7a7875;
+    --text-mid: #b0ada8;
+    --amber: #f5a623;
+    --amber-dim: rgba(245,166,35,0.15);
+    --amber-glow: rgba(245,166,35,0.35);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'DM Sans', sans-serif; font-weight: 300;
+    min-height: 100vh;
+  }
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 40px; border-bottom: 1px solid var(--border);
+  }
+  .logo { display: flex; align-items: baseline; gap: 10px; text-decoration: none; }
+  .logo-word { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; color: var(--text); }
+  .logo-dot {
+    width: 8px; height: 8px; background: var(--amber); border-radius: 50%;
+    margin-bottom: 4px; box-shadow: 0 0 12px var(--amber-glow);
+  }
+  .content {
+    max-width: 720px; margin: 0 auto; padding: 60px 24px 80px;
+  }
+  .page-title {
+    font-family: 'Bebas Neue', sans-serif; font-size: 52px;
+    letter-spacing: 2px; margin-bottom: 8px;
+  }
+  .last-updated {
+    font-size: 12px; color: var(--text-dim);
+    font-family: 'DM Mono', monospace; margin-bottom: 48px;
+  }
+  h2 {
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--amber); font-weight: 500; margin: 40px 0 14px;
+  }
+  p {
+    font-size: 15px; color: var(--text-mid); line-height: 1.75;
+    font-weight: 300; margin-bottom: 14px;
+  }
+  ul {
+    padding-left: 20px; margin-bottom: 14px;
+  }
+  ul li {
+    font-size: 15px; color: var(--text-mid); line-height: 1.75;
+    font-weight: 300; margin-bottom: 6px;
+  }
+  a { color: var(--amber); }
+  footer {
+    border-top: 1px solid var(--border); padding: 28px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-copy { font-size: 12px; color: var(--text-dim); }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a {
+    font-size: 12px; color: var(--text-dim); text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--amber); }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">
+    <span class="logo-word">LENS</span>
+    <div class="logo-dot"></div>
+    <span class="logo-word">LOGIC</span>
+  </a>
+</header>
+
+<div class="content">
+  <div class="page-title">Privacy Policy</div>
+  <div class="last-updated">Last updated: June 2025</div>
+
+  <h2>Overview</h2>
+  <p>LensLogic ("we", "us", "our") is committed to protecting your privacy. This policy explains what information is collected when you use LensLogic and how it is handled.</p>
+
+  <h2>Photos You Upload</h2>
+  <p>Photos you upload are transmitted to our server solely for the purpose of generating AI feedback. <strong style="color: var(--text);">We do not store, save, or retain your photos</strong> at any point. Once the analysis is returned to your browser, the image data is discarded. We have no database of uploaded images.</p>
+
+  <h2>AI Processing</h2>
+  <p>Your photo is sent to Anthropic's Claude API to generate the analysis. Anthropic may process image data in accordance with their own privacy policy and terms of service. We encourage you to review <a href="https://www.anthropic.com/policies/privacy" target="_blank">Anthropic's Privacy Policy</a>.</p>
+
+  <h2>Data We Do Not Collect</h2>
+  <p>We do not collect, store, or sell:</p>
+  <ul>
+    <li>Your name, email address, or any account information</li>
+    <li>Your uploaded photos</li>
+    <li>The AI analysis results generated for you</li>
+    <li>Any payment information (the service is free)</li>
+  </ul>
+
+  <h2>Technical Logs</h2>
+  <p>Our server may temporarily log standard request information such as IP addresses and request timestamps for the purpose of rate limiting abuse and maintaining service stability. These logs are not linked to your identity and are not retained beyond normal server operation periods.</p>
+
+  <h2>Cookies</h2>
+  <p>LensLogic does not use cookies, tracking pixels, or any third-party analytics services. No tracking of any kind is performed.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>We use the following third-party services to operate LensLogic:</p>
+  <ul>
+    <li><strong style="color: var(--text);">Render</strong> — hosting provider for our server</li>
+    <li><strong style="color: var(--text);">Anthropic</strong> — AI model API for photo analysis</li>
+    <li><strong style="color: var(--text);">Google Fonts</strong> — typography loaded in your browser</li>
+  </ul>
+  <p>Each of these services operates under their own privacy policies.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>LensLogic is not directed at children under the age of 13. We do not knowingly collect any information from children. If you believe a child has used the service in a way that violates this policy, please contact us.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated date. Continued use of LensLogic after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions about this Privacy Policy, you can reach us by opening an issue on our <a href="https://github.com/zaiins/lenslogic-server" target="_blank">GitHub repository</a>.</p>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2025 LensLogic. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Service</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,14 +1,32 @@
 const express = require('express');
 const cors = require('cors');
+const rateLimit = require('express-rate-limit');
 
 const app = express();
 app.use(cors());
-app.use(express.json({ limit: '25mb' }));
+app.use(express.json({ limit: '10mb' }));
+
+const limiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 5,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests — please wait a minute and try again.' }
+});
+
+app.use('/analyze', limiter);
+
+const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
 
 app.post('/analyze', async (req, res) => {
   const { imageBase64, mediaType } = req.body;
+
   if (!imageBase64 || !mediaType) {
     return res.status(400).json({ error: 'Missing imageBase64 or mediaType' });
+  }
+
+  if (!ALLOWED_TYPES.includes(mediaType)) {
+    return res.status(400).json({ error: 'Invalid file type. Only JPEG, PNG, WEBP, and GIF are allowed.' });
   }
 
   const prompt = `You are a world-class photography coach — warm, encouraging, and specific. Analyze this photo and respond ONLY with a JSON object (no markdown, no backticks, no preamble).
@@ -86,6 +104,8 @@ Be encouraging — every photo has something working. Never be negative about ho
 
 app.use(express.static(__dirname));
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
+app.get('/privacy', (req, res) => res.sendFile(__dirname + '/privacy.html'));
+app.get('/terms', (req, res) => res.sendFile(__dirname + '/terms.html'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`LensLogic server running on port ${PORT}`));
